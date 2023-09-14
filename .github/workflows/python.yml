@@ -15,8 +15,9 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v2
-      with:
+      with:      	
         python-version: '3.9'
+        node-version: '16'  # Add this line to specify Node16
 
     - name: Install dependencies
       run: pip install -r requirements.txt
