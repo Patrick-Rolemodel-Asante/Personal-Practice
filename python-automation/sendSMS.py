@@ -1,13 +1,13 @@
 from twilio.rest import Client
 
 account_sid = 'AC5ac77c07699c57fd52b1ab5282b3c61d'
-auth_token = 'e4a0ef2903be4f0413c2d7e2e8173db1'
+auth_token = '[AuthToken]'
 client = Client(account_sid, auth_token)
 
 def sendSMS():
 	message = client.messages.create(
 	  from_='+15176843656',
-	  body='Secret admirer',
+	  body='My love is sweet for you',
 	  to='+233557386125'
 	)
 
