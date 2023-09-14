@@ -23,5 +23,5 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run Python script
-      run: python sendSMS1.py
+      run: python /home/runner/work/Personal-Practice/Personal-Practice/python-automation/sendSMS1.py
 
