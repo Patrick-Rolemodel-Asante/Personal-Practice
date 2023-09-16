@@ -1,0 +1,63 @@
+ 1.  List all files in current working directory and even in subdirectories
+--> $ ls * 
+ NB: Juar know that this is the internal working of the ls command
+ 
+ 2. To list all files with some extensions
+--> $ ls *.*
+ 
+ 3. To list all files with txt extension
+ --> S ls *.txt
+ 
+ 4. To list all java files
+ --> $ ls *.java
+ 
+ 5. To list all files that start with the letter 'a'
+ --> $ ls a*
+ 
+ 6. To list all files that start with a but ends with t
+ --> $ ls a*t
+      
+7. To list all files where file name contains only 2 characters and the first character must be 'a'
+--> $ ls a?
+
+8. To list all files where filename should contain only 2 characters
+--> $ ls ??
+
+9. To list all files where filename should contain only 3 characters
+--> $ ls ???
+
+10. To list all files where filename should contain at least 3 characters
+--> $ ls ???*
+
+11. To list all files where filename should start with a or b or c
+--> $ ls [a-c]* or ls [abc]*
+
+12. To list all files where filename should not start with a or b or c
+--> $ ls [!abc]*
+
+13. To list all files that start with lowercase alphabet symbols
+--> $ ls [a-z]* or ls [[:lower:]]*
+
+14. To list all filenames that start with uppercase alphabet symbols
+--> ls [A-z]* or ls [[:upper:]]*
+
+15. To list all files that start with a digit 
+--> $ ls [0-9]* or [[:digit:]]*
+
+16. To list all files where filename starts with uppercase alphabet symbol, second letter a digit, third letter lowercase alphabet symbol
+--> $ ls [A-Z0-9a-z] or ls [[:upper:]][[:digit]][[:lower:]]
+
+17. To list all files where filename starts with a special character
+--> $ ls [![:alnum:]]* or ls [!a-zA-Z0-9]
+
+18.To list all files with a .java or .py extension
+--> $ ls {*.java, *.py} or ls *.{java,py}
+
+19. Copy all files that start with a digit to dir1 directory
+--> $ cp [0-9]* dir1 or cp [[:digit:]]* dir1
+
+20. move all files that start with alphabet symbol with a .txt to dir2 directory
+--> $ [[:alhpa:]]*.txt dir2 
+
+
+		
