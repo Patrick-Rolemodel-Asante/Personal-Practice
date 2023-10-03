@@ -1,0 +1,47 @@
+There are 4 types of storage classes in C : auto, register, static, extern.
+
+Storage classes are written before the data type of a variable: storage_class data_type variable_name;
+
+Storage classes determine the default value, scope, location in memory and lifetime of variables.
+
+auto:
+-----
+scope: block or function
+default value: garbage value
+location in memory: stack
+lifetime: gets destroyed after the block it is found in has ended ie variable can be accessed within block only (stack of RAM).
+
+NB: If no storage class is written for a variable, auto storage class is assigned.
+
+
+register:
+---------
+scope: block or function
+default value: garbage value
+location in memory: CPU register
+lifetime: can be accessed only within the block it is defined
+
+
+NB: register variables can improve the performance and speed of program execution because such variables are stored in register, a part of the CPU which makes them faster to be accessed. They are mainly used for loop control variables as such variables are frequently accessed and hence reduce the number of memory accesses thereby saving time. 
+
+Limitations of register variables.
+----------------------------------
+1. Compiler may ignore the register hint and choose a different optimization strategy.
+2. Compiler may decide to put some variables in register without the register keyword.
+3. Register variables cannot have their addresses taken as they may not have memory location ie you cannot use the & operator or pass them as pointers to functions.
+4. Cannot be used with static, extern or global variables
+
+
+static
+------
+scope: depends on where they are defined: function/block -> local scope and internal linkage (ie can only be accessed within that function or block and are nott visible to other translation unit); program -> global scope and internal linkage (ie accessed anywhere within the same translation unit ie source file)
+default value: float -> 0.000000, char and char [] -> NULL, int -> 0
+location in memory: stack of RAM
+lifetime: preserve their value even after they go out of their scope ie till the end of the program.
+
+NOTE
+----
+1. static variables are not re-declared or reallocated each time they are used.
+2. static variables are initialized only once and exist until the termination of the program
+
+Limitations of static variable: make code less modular, testable and thread-safe.
